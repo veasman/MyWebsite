@@ -41,10 +41,67 @@ main {
 
 .links {
     text-align: left;
+    position: relative;
+    float: left;
+}
+
+.github {
+    background: url(res/github.png);
+    width: 32px;
+    height: 32px;
+}
+.github a {
+    padding-top: 5px;
+    padding-left: 64px;
+}
+
+.youtube {
+    background: url(res/youtube.jpg);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+.youtube a {
+    padding-top: 5px;
+    padding-left: 64px;
+}
+
+.youtube-music {
+    background: url(res/youtube-music.png);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+.youtube-music a {
+    padding-top: 5px;
+    padding-left: 64px;
+}
+
+.steam {
+    background: url(res/steam.png);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+.steam a {
+    padding-top: 5px;
+    padding-left: 64px;
+}
+
+.discord {
+    background: url(res/discord.png);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+.discord a {
+    padding-top: 5px;
+    padding-left: 64px;
 }
 
 a {
     color: #ebdbb2;
+    text-decoration: none;
 }
 
 img {
