@@ -27,6 +27,8 @@ body::-webkit-scrollbar-thumb {
     background: #458588;
 }
 
+/* Credits to broken#3575 for
+   helping me fix the links */
 main {
     margin-left: 5rem;
     padding: 1rem;
