@@ -1,11 +1,6 @@
 :root {
     font-size: 16px;
     font-family: 'Open Sans';
-    --text-primary: #d6cfcb;
-    --text-secondary: #d6cfcb;
-    --bg-primary: #212529;
-    --bg-secondary: #73939c;
-    --transition-speed: 200ms;
 }
 
 body {
@@ -13,45 +8,25 @@ body {
     background-color: #343a40;
     margin: 0;
     padding: 0;
-}
-
-body::-webkit-scrollbar {
-    width: 0.25rem;
-}
-
-body::-webkit-scrollbar-track {
-    background: #212529;
-}
-
-body::-webkit-scrollbar-thumb {
-    background: #458588;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* Credits to broken#3575 for
    helping me fix the links */
-main {
-    margin-left: 5rem;
-    padding: 1rem;
-    text-align: center;
-    margin: 2.5rem;
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-
-.links ul {
+ul {
     display: flex;
     position: absolute;
-    transform: translate(-33%);
+    transform: translate(-50%);
 }
 
-.links ul li {
+ul li {
     list-style: none;
 }
 
-.links ul li a {
+ul li a {
     width: 80px;
     height: 80px;
     background-color: #d6cfcb;
@@ -67,19 +42,19 @@ main {
     z-index: 1;
 }
 
-.links ul li a .icon {
+ul li a .icon {
     position: relative;
     color: #343a40;
     transition: 500ms;
     z-index: 3;
 }
 
-.links li a:hover .icon {
+li a:hover .icon {
     color: #d6cfcb;
     transform: rotateY(360deg);
 }
 
-.links ul li a:before {
+ul li a:before {
     content: "";
     position: absolute;
     top: 100%;
@@ -91,171 +66,26 @@ main {
     z-index: 2;
 }
 
-.links ul li a:hover:before {
+ul li a:hover:before {
   top: 0;
 }
 
-.links ul li:nth-child(1) a:before{
+ul li:nth-child(1) a:before{
   background: #21262d;
 }
 
-.links ul li:nth-child(2) a:before{
+ul li:nth-child(2) a:before{
   background: #dd4b39;
 }
 
-.links ul li:nth-child(3) a:before {
+ul li:nth-child(3) a:before {
   background: #4b5bab;
 }
 
-.links ul li:nth-child(4) a:before {
+ul li:nth-child(4) a:before {
   background: #323e4f;
 }
 
-.cat img {
+img {
     border-radius: 50%;
-}
-
-.navbar {
-    position: fixed;
-    background-color: var(--bg-primary);
-    transition: width var(--transition-speed) ease;
-}
-
-.navbar-nav {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-}
-
-.nav-item {
-    width: 100%;
-}
-
-.nav-item:last-child {
-    margin-top: auto;
-}
-
-.nav-link {
-    display: flex;
-    align-items: center;
-    height: 5rem;
-    color: var(--text-primary);
-    text-decoration: none;
-    filter: grayscale(100%) opacity(0.7);
-    transition: var(--transition-speed);
-}
-
-.nav-link:hover {
-    filter: grayscale(0%) opacity(1);
-    background: var(--bg-secondary);
-    color: var(--text-secondary);
-}
-
-.link-text {
-    display: none;
-    margin-left: 1rem;
-    transition: var(--transition-speed);
-}
-
-.nav-link svg {
-    width: 2rem;
-    min-width: 2rem;
-    margin: 0 1.5rem;
-}
-
-.navbar:hover .link-text {
-    display: block;
-}
-
-.fa-primary {
-    color: #ff7eee;
-}
-
-.fa-secondary {
-    color: #df49a6
-}
-
-.fa-primary,
-.fa-secondary {
-    transition: var(--transition-speed);
-}
-
-.logo {
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    text-align: center;
-    color: var(--text-secondary);
-    background: var(--bg-secondary);
-    font-size: 1.5rem;
-    letter-spacing: 0.3ch;
-    width: 100%
-}
-
-.logo svg {
-    transform: rotate(0deg);
-    transition: var(--transition-speed);
-}
-
-.logo-text {
-    display: inline;
-    position: absolute;
-    left: -999px;
-    transition: var(--transition-speed);
-}
-
-.navbar:hover .logo svg {
-    transform: rotate(-180deg);
-}
-
-@media only screen and (max-width: 600px) {
-    .navbar {
-        bottom: 0;
-        width: 100vw;
-        height: 5rem;
-    }
-
-    .logo {
-        display: none;
-    }
-
-    .navbar-nav {
-        flex-direction: row;
-    }
-
-    .nav-link {
-        justify-content: center;
-    }
-
-    main {
-        margin: 0;
-    }
-}
-
-@media only screen and (min-width: 600px) {
-    .navbar {
-        top: 0;
-        width: 5rem;
-        height: 100vh;
-    }
-
-    .navbar:hover{
-        width: 16rem;
-    }
-
-    .navbar:hover .link-text {
-        display: inline;
-    }
-
-    .navbar:hover .logo svg {
-        margin-left: 11rem;
-    }
-
-    .navbar:hover .logo-text {
-        left: 0px;
-    }
 }
