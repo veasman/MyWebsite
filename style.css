@@ -1,16 +1,16 @@
 :root {
     font-size: 16px;
     font-family: 'Open Sans';
-    --text-primary: #ebdbb2;
-    --text-secondary: #fbf1c7;
-    --bg-primary: #1d2021;
-    --bg-secondary: #458588;
-    --transition-speed: 150ms;
+    --text-primary: #d6cfcb;
+    --text-secondary: #d6cfcb;
+    --bg-primary: #212529;
+    --bg-secondary: #73939c;
+    --transition-speed: 200ms;
 }
 
 body {
-    color: #ebdbb2;
-    background-color: #282828;
+    color: #d6cfcb;
+    background-color: #343a40;
     margin: 0;
     padding: 0;
 }
@@ -20,7 +20,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-    background: #1d2021;
+    background: #212529;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -35,78 +35,83 @@ main {
     text-align: center;
     margin: 2.5rem;
     position: absolute;
-    top: 40%;
+    top: 35%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
-.links {
-    text-align: left;
+.links ul {
+    display: flex;
+    position: absolute;
+    transform: translate(-33%);
+}
+
+.links ul li {
+    list-style: none;
+}
+
+.links ul li a {
+    width: 80px;
+    height: 80px;
+    background-color: #d6cfcb;
+    text-align: center;
+    line-height: 80px;
+    font-size: 35px;
+    margin: 0 10px;
+    display: block;
+    border-radius: 50%;
     position: relative;
-    float: left;
+    overflow: hidden;
+    border: 3px solid #d6cfcb;
+    z-index: 1;
 }
 
-.github {
-    background: url(res/github.png);
-    width: 32px;
-    height: 32px;
-}
-.github a {
-    padding-top: 5px;
-    padding-left: 64px;
+.links ul li a .icon {
+    position: relative;
+    color: #343a40;
+    transition: 500ms;
+    z-index: 3;
 }
 
-.youtube {
-    background: url(res/youtube.jpg);
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-}
-.youtube a {
-    padding-top: 5px;
-    padding-left: 64px;
+.links li a:hover .icon {
+    color: #d6cfcb;
+    transform: rotateY(360deg);
 }
 
-.youtube-music {
-    background: url(res/youtube-music.png);
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-}
-.youtube-music a {
-    padding-top: 5px;
-    padding-left: 64px;
-}
-
-.steam {
-    background: url(res/steam.png);
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-}
-.steam a {
-    padding-top: 5px;
-    padding-left: 64px;
+.links ul li a:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f00;
+    transition: 500ms;
+    z-index: 2;
 }
 
-.discord {
-    background: url(res/discord.png);
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-}
-.discord a {
-    padding-top: 5px;
-    padding-left: 64px;
+.links ul li a:hover:before {
+  top: 0;
 }
 
-a {
-    color: #ebdbb2;
-    text-decoration: none;
+.links ul li:nth-child(1) a:before{
+  background: #293241;
 }
 
-img {
+.links ul li:nth-child(2) a:before{
+  background: #dd4b39;
+}
+
+.links ul li:nth-child(3) a:before {
+  background: #4b5bab;
+}
+
+.links ul li:nth-child(4) a:before {
+  background: #323e4f;
+}
+
+.cat img {
     border-radius: 50%;
 }
 
