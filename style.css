@@ -82,6 +82,10 @@ ul li:nth-child(4) a:before {
   background: #323e4f;
 }
 
+ul li:nth-child(5) a:before {
+  background: #5865F2;
+}
+
 img {
     border-radius: 50%;
 }
