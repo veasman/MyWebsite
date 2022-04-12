@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "veasman.github.io": {
+    "moren.tech": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/veasman.github.io",
+            "outputPath": "dist/moren.tech",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -73,10 +73,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "veasman.github.io:build:production"
+              "browserTarget": "moren.tech:build:production"
             },
             "development": {
-              "browserTarget": "veasman.github.io:build:development"
+              "browserTarget": "moren.tech:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -84,7 +84,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "veasman.github.io:build"
+            "browserTarget": "moren.tech:build"
           }
         },
         "test": {
@@ -109,5 +109,5 @@
       }
     }
   },
-  "defaultProject": "veasman.github.io"
+  "defaultProject": "moren.tech"
 }
